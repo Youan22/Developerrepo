@@ -1,12 +1,31 @@
 ﻿using System;
+using System.Collections.Generic;
+
 
 namespace unit02_hilo
 {
-    class Program
+    public class Deck
     {
-        static void Main(string[] args)
+        public static void Main(string[] args){
+            
+        }
+        int card;
+    
+
+        public Deck()
         {
-            Console.WriteLine("Hello World!");
+        }
+
+        public int GetNumber()
+        {
+           
+            Random random = new Random();
+            
+            card = random.Next(1,14);
+
+            return card;
+
+
         }
     }
 }
