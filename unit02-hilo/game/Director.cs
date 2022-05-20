@@ -8,7 +8,7 @@ namespace game.unit02_hilo
     public class Player
     {
         int Points;
-        Deck deck = new Deck();
+        Card card = new Card();
         int startcard;
         int endcard;
         //deck.GetNumber();
@@ -19,7 +19,7 @@ namespace game.unit02_hilo
         public Player()
         {
             Points = 300;
-            startcard = deck.GetNumber();
+            startcard = card.GetNumber();
         }
 
         public void StartGame()
@@ -32,7 +32,7 @@ namespace game.unit02_hilo
                 Console.WriteLine($"The card is :{startcard}");
                 Console.Write("Higher or lower? [h/l]");
                 answer = Console.ReadLine();
-                endcard = deck.GetNumber();
+                endcard = card.GetNumber();
                 Console.WriteLine($"The next card was :{endcard}");
                 if ((answer == "H" || answer == "h") && endcard >= startcard)
                 {
@@ -53,7 +53,7 @@ namespace game.unit02_hilo
 
                 Console.WriteLine($"Your score is {Points}");
 
-                Console.WriteLine("Play again? [y/n]");
+                Console.Write("Play again? [y/n]");
                 string ans = Console.ReadLine();
                 if (ans == "N" || ans == "n")
                 {
@@ -61,7 +61,7 @@ namespace game.unit02_hilo
                 }
                 startcard = endcard;
             }
-
+            Console.WriteLine("Gmae is over!");
         }
     }
 }

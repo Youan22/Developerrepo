@@ -1,31 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using game.unit02_hilo;
 
 
-namespace unit02_hilo
+namespace game.unit02_hilo
 {
-    public class Deck
+    /// <summary>
+    /// The program's entry point.
+    /// </summary>
+    class Program
     {
-        public static void Main(string[] args){
-            
-        }
-        int card;
-    
-
-        public Deck()
+        /// <summary>
+        /// Starts the program using the given arguments.
+        /// </summary>
+        /// <param name="args">The given arguments.</param>
+        static void Main(string[] args)
         {
-        }
-
-        public int GetNumber()
-        {
-           
-            Random random = new Random();
-            
-            card = random.Next(1,14);
-
-            return card;
-
-
+            Player director = new Player();
+            director.StartGame();
         }
     }
 }
